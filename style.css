@@ -1,0 +1,162 @@
+/*
+ Theme Name:   Permanent Tourist FSE
+ Description:  Child Theme for permanenttourist.ch
+ Author:       Mark Howells-Mead
+ Author URI:   httpw://www.permanenttourist.ch/
+ Template:     livro
+ Version:      1.0.4
+ Text Domain:  permanent-tourist-fse
+*/
+
+:root {
+	/* https://utopia.fyi/type/calculator?c=320,16,1.2,1440,22,1.25,1,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+	--step-0: clamp(1.125rem, calc(1rem + 0.31vw), 1.44rem);
+  --step-1: clamp(1.20rem, calc(1.11rem + 0.43vw), 1.80rem);
+}
+
+body {
+	--wp--preset--font-size--medium: var(--step-0);
+	--wp--preset--font-size--large: var(--step-1);
+}
+
+.wp-block-group {
+		column-gap: calc(var(--wp--style--block-gap) / 5) !important;
+}
+
+.alignwide {
+	max-width: 1280px !important;
+}
+
+.c-postmeta .wp-block-post-title a {
+	color: var(--wp--preset--color--custom-blue);
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.25ch;
+	text-decoration-style: dotted;
+	text-decoration-line: underline;
+}
+
+.c-postmeta .wp-block-post-title a:hover, .c-postmeta .wp-block-post-title a:focus {
+	text-decoration-style: solid;
+}
+
+.wp-block-gallery {
+	--gallery-block--gutter-size: 3rem;
+}
+
+* + .wp-block-image {
+	margin-top: var( --wp--style--block-gap );
+	margin-bottom: 0;
+}
+
+.wp-block-image figcaption {
+	color: currentColor;
+  font-size: 80%;
+}
+
+.wp-block-image img, .wp-block-post-featured-image img {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c-postlist--front .wp-block-post-featured-image {
+	aspect-ratio: 3 / 2;
+	overflow: hidden;
+}
+
+.c-postlist--front .wp-block-post-featured-image img, .c-postlist--front .wp-block-post-featured-image a {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.c-postloop--default .wp-block-post-featured-image {
+	aspect-ratio: 3 / 2;
+	overflow: hidden;
+}
+
+.c-postloop--default .wp-block-post-featured-image a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.c-postloop--default .wp-block-post-featured-image img {
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+	height: 100%;
+}
+
+textarea, input:not([type="submit"]):not([type="button"]) {
+	background-color: var(--wp--preset--color--white);
+}
+
+.wp-block-post-template .wp-block-post > * {
+margin-top: 0;
+	margin-bottom: 0;
+}
+
+.wp-block-post-template .wp-block-post > * + * {
+	margin-top: var(--wp--style--block-gap);
+}
+
+.wp-block-categories-list {
+	padding-left: 0;
+	list-style: none;
+}
+
+.wp-block-categories-list > * {
+	--wp--style--block-gap: .5rem;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.wp-block-categories-list > * + * {
+	margin-top: var(--wp--style--block-gap);
+}
+
+.wp-block-separator {
+	--wp--style--block-gap: 4vh;
+    margin-bottom: var(--wp--style--block-gap);
+	border-bottom-width: 1px;
+}
+
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+	width: 100%;
+	max-width: 300px;
+}
+
+.wp-block-query-pagination-numbers .page-numbers + .page-numbers {margin-left: 0.5rem;}
+
+.wp-block-spacer {
+	--wp--style--block-gap: 0;
+}
+
+.wp-block-media-text:first-child {
+	margin-bottom: 2.5vw;
+	box-shadow: 0 0 1rem #f0f0f0;
+}
+
+.wp-block-post-date {
+	--wp--style--block-gap: .25vw;
+}
+
+.post-type-archive-photo .wp-block-post-title {
+	font-size: var(--wp--preset--font-size--small) !important;
+}
+
+.post-type-archive-photo .c-postloop--default .wp-block-post-featured-image {
+	aspect-ratio: 1 / 1;
+}
+
+img {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	max-width: 100%;
+	height: auto;
+}
